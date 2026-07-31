@@ -71,16 +71,16 @@ $dischi = [
 
         <h1 class="text-center m-2">php-dischi</h1>
 <div class="container d-flex flex-wrap justify-content-center gap-2 pb-3">
-        <?php foreach ($dischi as $disco => $value) {
+        <?php foreach ($dischi as $disco) {
 
 echo "<div class='card' style='width: 18rem;'>
-  <img src='{$value['cover']}' class='card-img-top' alt='{$value['titolo']}'>
+  <img src='{$disco['cover']}' class='card-img-top' alt='{$disco['titolo']}'>
   <div class='card-body'>
     <p class='card-text'>
-        Titolo: {$value['titolo']}<br>
-        Artista: {$value['artista']}<br>
-        Anno: {$value['anno']}<br>
-        Genere: {$value['genere']}
+        Titolo: {$disco['titolo']}<br>
+        Artista: {$disco['artista']}<br>
+        Anno: {$disco['anno']}<br>
+        Genere: {$disco['genere']}
     </p>
   </div>
 </div>";
@@ -90,7 +90,6 @@ echo "<div class='card' style='width: 18rem;'>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
 </body>
 
 </html>

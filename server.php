@@ -1,20 +1,13 @@
 <?php
-// Recupero i dati dal form inviato tramite POST
-// echo $_POST['titolo'];
-// echo $_POST['artista'];
-// echo $_POST['anno'];
-// echo $_POST['genere'];
-// echo $_POST['cover'];
 
-//legge il contenuto del file JSON
-$dischi_text = file_get_contents('./dischi.json');
+$dischi_text = file_get_contents('./dischi.json'); // coverto il json in una stringa php
 // echo $dischi_text;
 
-// convertiamo la stringa da json a dati php
-$dischi = json_decode($dischi_text, true);
 
-//modifichiamo la struttura dati php
+$dischi = json_decode($dischi_text, true); // prende la stringa php e la converte in una array associativa php
 
+
+// aggiungiamo un nuovo disco all'array associativo
 $dischi[] = [
     'titolo' => $_POST['titolo'],
     'artista' => $_POST['artista'],
@@ -27,10 +20,10 @@ $dischi[] = [
 // convertiamo la struttura dati php in json
 $dischi_text_updated = json_encode($dischi, JSON_PRETTY_PRINT);
 
-// scriviamo il nuovo contenuto nel file json
+// sovrascriviamo il file dischi.json con la nuova struttura dati
 file_put_contents('./dischi.json', $dischi_text_updated);
 
-//dirottiamo l'utente alla pagina index.php
+// reindirizziamo l'utente alla pagina index.php
 header('Location: index.php');
 
 ?>

@@ -48,11 +48,11 @@ $dischi = json_decode($dischi, true);
             <h2 class="text-center m-2">Aggiungi il tuo album!</h2>
             <form action="server.php" method="post" class="d-flex flex-column gap-2 mb-3">
 
-                    <input type="text" id="titolo" name="titolo" placeholder="Titolo">
-                    <input type="text" id="artista" name="artista" placeholder="Artista">
+                    <input type="text" id="titolo" name="titolo" placeholder="Titolo" required>
+                    <input type="text" id="artista" name="artista" placeholder="Artista" required>
                     <input type="number" id="anno" name="anno" placeholder="Anno">
                     <input type="text" id="genere" name="genere" placeholder="Genere">
-                    <input type="url" id="cover" name="cover" placeholder="Cover"value="https://placedog.net/360/480/pixelate">
+                    <input type="url" id="cover" name="cover" placeholder="Cover" value="https://picsum.photos/500/500">
                     <button type="submit" class="btn btn-primary">Aggiungi</button>
 
             </form>

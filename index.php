@@ -27,21 +27,20 @@ $dischi = json_decode($dischi, true);
 
         <h1 class="text-center m-2">php-dischi</h1>
         <div class="container d-flex flex-wrap justify-content-center gap-2 pb-3">
-            <?php foreach ($dischi as $disco) {
+            <?php foreach ($dischi as $disco) { ?>
 
-                echo
-                "<div class='card' style='width: 18rem;'>
-                    <img src='{$disco['cover']}' class='card-img-top' alt='{$disco['titolo']}'>
-                        <div class='card-body'>
-                            <p class='card-text'>
-                                Titolo: {$disco['titolo']}<br>
-                                Artista: {$disco['artista']}<br>
-                                Anno: {$disco['anno']}<br>
-                                Genere: {$disco['genere']}
+                <div class='card' style='width: 18rem;'>
+                    <img src="<?php echo $disco['cover']; ?>" class="card-img-top" alt="<?php echo $disco['titolo']; ?>">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Titolo: <?php echo $disco['titolo']; ?><br>
+                                Artista: <?php echo $disco['artista']; ?><br>
+                                Anno: <?php echo $disco['anno']; ?><br>
+                                Genere: <?php echo $disco['genere']; ?>
                             </p>
                         </div>
-                </div>";
-            } ?>
+                </div>
+            <?php } ?>
         </div>
         <hr>
         <div class="container">
